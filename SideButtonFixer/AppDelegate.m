@@ -25,6 +25,8 @@
 static NSMutableDictionary<NSNumber*, NSArray<NSDictionary*>*>* swipeInfo = nil;
 static NSArray* nullArray = nil;
 
+NSMutableArray *ignoredApplications = nil;
+
 static void SBFFakeSwipe(TLInfoSwipeDirection dir) {
     CGEventRef event1 = tl_CGEventCreateFromGesture((__bridge CFDictionaryRef)(swipeInfo[@(dir)][0]), (__bridge CFArrayRef)nullArray);
     CGEventRef event2 = tl_CGEventCreateFromGesture((__bridge CFDictionaryRef)(swipeInfo[@(dir)][1]), (__bridge CFArrayRef)nullArray);
@@ -43,6 +45,15 @@ static CGEventRef SBFMouseCallback(CGEventTapProxy proxy, CGEventType type, CGEv
     BOOL mouseDown = [[NSUserDefaults standardUserDefaults] boolForKey:@"SBFMouseDown"];
     BOOL swapButtons = [[NSUserDefaults standardUserDefaults] boolForKey:@"SBFSwapButtons"];
     
+    NSWorkspace *currentWs = [NSWorkspace sharedWorkspace];
+    NSRunningApplication *openedApp = currentWs.frontmostApplication;
+
+    if (openedApp != nil && openedApp.bundleIdentifier != nil && [ignoredApplications containsObject:(openedApp.bundleIdentifier)]) {
+        const char *identifier = [openedApp.bundleIdentifier UTF8String];
+        NSLog(@"%s is focused, not sending fake swipe", identifier);
+        return event;
+    }
+
     if (number == (swapButtons ? 4 : 3)) {
         if ((mouseDown && down) || (!mouseDown && !down)) {
             SBFFakeSwipe(kTLInfoSwipeLeft);
@@ -157,6 +168,13 @@ typedef NS_ENUM(NSInteger, MenuItem) {
         self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     }
     
+    // set up ignored applications list
+    {
+        ignoredApplications = [NSMutableArray arrayWithObjects:
+                               @"com.aspyr.borderlands2.steam",
+                               nil];
+    }
+
     // create menu
     {
         NSMenu* menu = [NSMenu new];
