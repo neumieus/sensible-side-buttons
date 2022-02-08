@@ -40,7 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4EC7C3B51EE711B400C9F725 /* SideButtonFixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SideButtonFixer.app; path = SensibleSideButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC7C3B51EE711B400C9F725 /* SensibleSideButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensibleSideButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC7C3B71EE711B400C9F725 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EC7C3B81EE711B400C9F725 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4EC7C3BD1EE711B400C9F725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			children = (
 				4ECC16961EE54D3D0062AC72 /* swipesiml */,
 				4EF68AE91EE55A9500F6B0E8 /* swipesimr */,
-				4EC7C3B51EE711B400C9F725 /* SideButtonFixer.app */,
+				4EC7C3B51EE711B400C9F725 /* SensibleSideButtons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			);
 			name = SensibleSideButtons;
 			productName = SideButtonFixer;
-			productReference = 4EC7C3B51EE711B400C9F725 /* SideButtonFixer.app */;
+			productReference = 4EC7C3B51EE711B400C9F725 /* SensibleSideButtons.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4ECC16951EE54D3D0062AC72 /* swipesiml */ = {
@@ -195,12 +195,11 @@
 		4ECC168E1EE54D3D0062AC72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Alexei Baboulevitch";
 				TargetAttributes = {
 					4EC7C3B41EE711B400C9F725 = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = R4MX2B96J2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -303,10 +302,10 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = R4MX2B96J2;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -331,10 +330,10 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = R4MX2B96J2;
+				DEVELOPMENT_TEAM = AD7SC3LN5S;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = SideButtonFixer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -371,6 +370,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -425,6 +425,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -453,6 +454,7 @@
 		4ECC169E1EE54D3D0062AC72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = R4MX2B96J2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +471,7 @@
 		4ECC169F1EE54D3D0062AC72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = R4MX2B96J2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,6 +485,7 @@
 		4EF68AE71EE55A9500F6B0E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = R4MX2B96J2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,6 +502,7 @@
 		4EF68AE81EE55A9500F6B0E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = R4MX2B96J2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
