@@ -172,6 +172,10 @@ typedef NS_ENUM(NSInteger, MenuItem) {
     {
         ignoredApplications = [NSMutableArray arrayWithObjects:
                                @"com.aspyr.borderlands2.steam",
+                               @"com.microsoft.rdc.macos",
+                               @"com.vmware.horizon",
+                               @"com.microsoft.VSCode",
+                               @"com.microsoft.visual-studio",
                                nil];
     }
 
